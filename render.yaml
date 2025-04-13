@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: matchmatics-flask
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://matchmatics_db_user:W8jGfLtcSHbgNC4l41pRfa6AN9CFgQRI@dpg-cvu3jemuk2gs7386h9rg-a.oregon-postgres.render.com/matchmatics_db
+
